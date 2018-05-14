@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <object th:include="fragments/head :: head" th:remove="tag"></object>
+</head>
+<body>
+<div id="wrapper" ng-app="ciscoApp" ng-controller="commandsCtrl">
+    <th:block th:replace="fragments/header :: nav('save-settings')"/>
+    <div id="page-wrapper" class="settings">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" style="margin: 40px 0 20px;">Zapisanie konfiguracji</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="alert alert-success" th:if="${param.success}">
+                    Ustawienia zostały załadowane z pliku.
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Pobierz konfigurację</div>
+                    <div class="panel-body">
+                        <a class="btn btn-primary"
+                           th:href="@{/rest/settings/download/settings.json}" role="button">Pobierz
+                            w pliku</a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Przywróc konfigurację z pliku</div>
+                    <div class="panel-body">
+                        <form method="post" th:action="@{/rest/settings/restore}"
+                              enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="file">Plik z konfiguracją</label>
+                                <input type="file" name="file" id="file"/>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Przywróć
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Przywróć ustawienia fabryczne</div>
+                    <div class="panel-body">
+                        <form method="post" th:action="@{/rest/settings/clear}"
+                              enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-danger">
+                                Przywróć ustawienia fabryczne
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block th:include="fragments/commands :: body"/>
+    </div>
+</div>
+<th:block th:include="fragments/scripts :: body"/>
+</body>
+</html>

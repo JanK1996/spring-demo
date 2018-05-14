@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <object th:include="fragments/head :: head" th:remove="tag"></object>
+</head>
+<body>
+
+<div id="wrapper" ng-app="ciscoApp" ng-controller="commandsCtrl">
+    <th:block th:replace="fragments/header :: nav('interfaces')"/>
+    <div id="page-wrapper" class="settings">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" style="margin: 40px 0 20px;">Interfejsy sieciowe</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Ethernet</div>
+                    <div class="panel-body">
+                        <form ng-submit="submitFormIP('ip')">
+
+                            <div class="form-group" ng-class="{'has-error': errorsIP == true}">
+                                <label>Konfiguracja adresu IP</label>
+                                <p class="help-block">Podaj adres IP:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.ethernetInterface.ips"
+                                       id="ips"/>
+                                <p class="help-block">Podaj maskę:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.ethernetInterface.masks"
+                                       id="masks"/>
+                            </div>
+                            <div class="form-group">
+                                <p class="help-block">Podaj opis:</p>
+                                <input type="text" class="form-control"
+                                       ng-model="settings.ethernetInterface.description"
+                                       id="description"/>
+                            </div>
+                            <span ng-show="errorsIP" ng-cloak
+                                  class="help-block">Błędny adres IP lub maska</span>
+                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Interfejs szeregowy</div>
+                    <div class="panel-body">
+                        <form ng-submit="submitFormIP('serial')">
+
+                            <div class="form-group" ng-class="{'has-error': errorsSerial == true}">
+                                <label>Konfiguracja adresu IP</label>
+                                <p class="help-block">Podaj adres IP:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.serialInterface.ips"
+                                       id="serialInterface_ips"/>
+                                <p class="help-block">Podaj maskę:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.serialInterface.masks"
+                                       id="serialInterface_masks"/>
+                                <span ng-show="errorsSerial" ng-cloak
+                                      class="help-block">Błędny adres IP lub maska</span>
+                            </div>
+
+                            <div class="form-group">
+                                <p class="help-block">Podaj częstotliwość taktowania:</p>
+                                <input type="text" class="form-control" ng-model="settings.serialInterface.clockRate"
+                                       id="serialInterface_clockRate"/>
+                                <p class="help-block">Podaj opis:</p>
+                                <input type="text" class="form-control" ng-model="settings.serialInterface.description"
+                                       id="serialInterface_description"/>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Wyłącznie interfejsu Ethernetowego</div>
+                    <div class="panel-body">
+                        <form ng-submit="submitFormIP('ipOff')">
+                            <div class="form-group" ng-class="{'has-error': errorsIPOff == true}">
+                                <label>Adres interfejsu</label>
+                                <p class="help-block">Podaj adres IP interfejsu, który chcesz wyłączyć:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.ethernetInterface.ipsShutdown"
+                                       id="ipsShutdown"/>
+                                <p class="help-block">Podaj maskę interfejsu, który chcesz wyłączyć:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.ethernetInterface.masksShutdown"
+                                       id="masksShutdown"/>
+                                <span ng-show="errorsIPOff" ng-cloak
+                                      class="help-block">Błędny adres IP lub maska</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Wyłącznie interfejsu Szeregowego</div>
+                    <div class="panel-body">
+                        <form ng-submit="submitFormIP('serialOff')">
+                            <div class="form-group" ng-class="{'has-error': errorsSerialOff == true}">
+                                <label>Adres interfejsu</label>
+                                <p class="help-block">Podaj adres IP interfejsu, który chcesz wyłączyć:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.serialInterface.ipsShutdown"
+                                       id="serialInterface_ipsShutdown"/>
+                                <p class="help-block">Podaj maskę interfejsu, który chcesz wyłączyć:</p>
+                                <input type="text" class="form-control" ng-list="&#10;" ng-trim="false" rows="1"
+                                       ng-model="settings.serialInterface.masksShutdown"
+                                       id="serialInterface_masksShutdown"/>
+
+                                <span ng-show="errorsSerialOff" ng-cloak
+                                      class="help-block">Błędny adres IP lub maska</span>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <th:block th:include="fragments/commands :: body"/>
+    </div>
+</div>
+<th:block th:include="fragments/scripts :: body"/>
+</body>
+</html>

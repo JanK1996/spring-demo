@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav th:fragment="header(currentPage)" class="navbar navbar-default navbar-static-top"
+     role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a th:inline="text" class="navbar-brand" th:href="@{/}">Router Cisco</a>
+    </div>
+    <!-- /.navbar-header -->
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a th:href="@{/}" th:classappend="${currentPage == 'home'}? 'active' : null"><i
+                            class="fa fa-fw fa-home"></i> Strona główna</a>
+                </li>
+                <li>
+                    <a th:href="@{/complex/add}" th:classappend="${currentPage == 'complex/add'}? 'active' : null"><i
+                            class="fa fa-fw fa-list"></i> Dodaj liczby zespolone</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>
+</body>
+</html>

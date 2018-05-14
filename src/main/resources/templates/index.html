@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <object th:include="fragments/head :: head" th:remove="tag"></object>
+</head>
+<body>
+<div id="wrapper" ng-app="ciscoApp" ng-controller="commandsCtrl">
+    <th:block th:replace="fragments/header :: nav('home')"/>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" style="margin: 40px 0 20px;">Strona główna</h1>
+            </div>
+        </div>
+        <th:block th:include="fragments/commands :: body"/>
+    </div>
+</div>
+<th:block th:include="fragments/scripts :: body"/>
+</body>
+</html>

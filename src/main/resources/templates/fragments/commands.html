@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-10">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Lista komend
+            </div>
+            <div class="panel-body">
+
+                <div ng-cloak ng-show="!commands">
+                    Obecnie nie ma żadnych komend do wykonania.
+                </div>
+                <div ng-cloak ng-show="commands">
+                    <pre ng-bind="commands"></pre>
+                    <a class="btn btn-primary" th:href="@{/rest/commands/download/commands.txt}"
+                       role="button">Pobierz w pliku</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

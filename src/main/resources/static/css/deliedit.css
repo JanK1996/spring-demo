@@ -1,0 +1,593 @@
+
+#wrapper{
+    font-family: Montserrat, Verdana, serif;
+}
+
+/* START INDEX *//* START INDEX *//* START INDEX */
+.col-lg-8 {
+    margin-left:200px;
+}
+.col-lg-3.col-md-6 {
+    margin-left:70px;
+    margin-bottom: 50px;
+}
+.row_background{
+
+    background-image: url("../images/geometry2.png")!important;
+}
+.row{
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgb(2, 136, 209);}
+.navbar-brand{
+    color:white;
+}
+
+.navbar-default .navbar-brand{
+    color:white;
+}
+.navbar-default .navbar-brand{
+    color:white;
+}
+/*  Logout icon color */
+.navbar-top-links a {
+    color:white;
+}
+/*  Glyps size */
+.col-xs-3{
+    font-size:50px;
+    margin-top:10px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0288D1;
+    border-color: #0288D1;
+}
+/* admin logo */
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+/* sent background color box */
+.panel-primary {
+    border-color: #0288D1;
+}
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #0288D1;
+    border-color: #0288D1;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #0288D1;
+}
+.panel-primary > .panel-heading .badge {
+    color: #0288D1;
+    background-color: #fff;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #0288D1;
+}
+/* H1-admin */
+.page-header {
+    padding-bottom: 20px;
+    margin: 20px 0px 20px -130px;
+    border-bottom: 1px solid #eee;
+    font-family: Montserrat, Verdana, serif;
+    font-size: 40px;
+    /* color:#f26611 ; */
+    color:#202020;
+
+}
+
+/* END INDEX *//* END INDEX *//* END INDEX */
+
+
+
+/* START HELP *//* START HELP *//* START HELP */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html{
+background-color:#0288D1;
+ background-size: cover;
+ height:100%;
+}
+
+#feedback-page{
+ text-align:center;
+}
+
+#form-main{
+ width:100%;
+float:left;
+ padding-top:20px;
+
+}
+
+#form-div {
+ background-color:rgba(72,72,72,0.4);
+ padding-left:35px;
+ padding-right:35px;
+ padding-top:35px;
+ padding-bottom:50px;
+ width: 500px;
+ float: left;
+ left: 50%;
+ position: absolute;
+ margin-top:30px;
+ margin-left: -300px;
+ -moz-border-radius: 7px;
+ -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+ color:#3c3c3c;
+    font-family: Montserrat, Verdana, serif;
+ font-weight:500;
+ font-size: 18px;
+ border-radius: 0;
+ line-height: 22px;
+ background-color: #fbfbfb;
+ padding: 13px 13px 13px 54px;
+ margin-bottom: 10px;
+ width:100%;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+ box-sizing: border-box;
+ border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+ background: #ececed;
+ box-shadow: 0;
+ border: 3px solid #3498db;
+ color: #3498db;
+ outline: none;
+ padding: 13px 13px 13px 54px;
+}
+
+.focused{
+ color:#30aed6;
+ border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#name:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-size: 30px 30px;
+    background-position: 8px 5px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#email:focus{
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+#comment{
+    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    background-color:white;
+}
+
+#button-blue{
+    font-family: Montserrat, Verdana, serif;
+    float:left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor:pointer;
+    background-color: #3498db;
+    color:white;
+    font-size:24px;
+    padding-top:22px;
+    padding-bottom:22px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#button-blue:hover{
+    background-color: rgba(0,0,0,0);
+    color: #0493bd;
+}
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.submit:hover .ease{
+    width:100%;
+    background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+    #form-div{
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+/* END HELP *//* END HELP *//* END HELP */
+
+/*CARD CONTACT CARD CONTACT START*/
+
+.contact_position{
+    margin-top:-8px;
+    margin-bottom: 0px;
+}
+.contact_position_bar .card{
+    height: 60px;
+}
+.contact_position_bar .contact_position_bar_color{
+    background-color:#ddd;
+    z-index: 999;
+}
+
+
+
+
+.contact_position_bar th{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    font-size: 16px;
+    height: 35px;
+    display:inline-block;
+    text-align: center;
+
+
+}
+.contact_position_bar th a{
+    text-decoration: none;
+    display:block;
+
+}
+tr>th{
+    float:left;
+    width:20%;
+
+
+}
+@media only screen and (max-width: 1600px) {
+    .contact_position_bar th{
+        font-size: 14px;
+    }
+
+}
+@media only screen and (max-width: 1366px) {
+    .contact_position_bar th{
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 1200px) {
+    .contact_position_bar th{
+        font-size: 10px;
+    }
+
+}
+
+
+/*CARD CONTACT CARD CONTACT END*/
+
+
+/* CARD HELP *//* CARD HELP *//* CARD HELP */
+#cards {
+    max-height: 750px;
+    margin: 3% 12% 3% 12%;
+
+    overflow-y: auto;
+    font-size: 14px;
+    background-color:#0288d1;
+    padding: 30px;
+    
+    border-radius: 10px;
+
+}
+
+.card {
+    border-radius: 4px;
+    background-color: #e9e9e9;
+    margin: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card .card-content {
+    padding: 20px;
+
+}
+
+
+
+.card .card-content p {
+    margin: 0;
+}
+.card .card-close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    position: relative;
+    top: -4px;
+    right: 0;
+}
+
+.card .card-close:hover,
+.card .card-close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.card .card-more {
+    padding: 10px;
+    background-color: #ddd;
+}
+
+.card .card-more a {
+    color: #909090;
+    text-decoration: none;
+}
+
+.card .card-more a:hover {
+    color: #909090;
+    text-decoration: underline;
+}
+
+.card-more .open-info {
+    color: #535353;
+    padding: 6px 0;
+    border-bottom: 1px solid #B3B3B3;
+}
+
+.card-more .open-info:last-child {
+    border-bottom: 0 none;
+}
+
+.card-more .time {
+    width: 30%;
+    float: left;
+}
+
+.card-more .location {
+    width: 35%;
+    float: left;
+}
+
+.card-more .browser {
+    width: 35%;
+    float: left;
+}
+
+.card-more .open-info:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/*Button search styles*/
+#datasearchsubmit
+{
+    width:150px;
+    height:50px;
+    font-size:20px;
+    font-family: Montserrat, Verdana, serif;
+    background-color: #5cb85c;
+    color:white;
+    padding:10px 10px;
+    margin: 12px 0;
+    margin-left:50px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    outline:none;
+}
+#datasearchsubmit:hover
+{
+    background-color: #4cae4c;
+}
+/*Datapickers styles*/
+#datepicker2, #datepicker1{
+    width:150px;
+    height:50px;
+    font-size:15px;
+    font-family: Montserrat, Verdana, serif;
+    background-color: #c6c6c6;
+    color:white;
+    margin:0 15px;
+    padding:10px 10px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    outline:none;
+}
+
+.card .headingsent{
+    max-width: 90%;
+    height:40px;
+    margin-top:-20px;
+    color: #7E8C8D;
+    font-size: 40px;
+    text-align: center;
+    font-family: Montserrat, Verdana, serif;
+
+}
+@media only screen and (max-width: 1800px) {
+    .card .headingsent{
+        font-size: 30px;
+
+    }
+}
+@media only screen and (max-width: 1460px) {
+    .card .headingsent{
+        font-size: 22px;
+
+    }
+}
+
+.card_position{
+    margin-left:30%;
+    margin-right:30%;
+}
+
+.card_position_menu{
+    margin-left:0;
+    margin-right:0;
+    padding: 1% 0;
+}
+
+/*CONTACTS DESIGN*/
+.card-content .input-group{
+    padding-top:1%;
+    margin-left:33%;
+    margin-right:33%;
+}
+
+.loope{
+    background-color: #5cb85c;
+}
+.loope:hover
+{
+    background-color: #4cae4c;
+}
+
+
+
+
+
+/*Przypomnienia START*/
+.mini_box{
+    height: 25px;
+    width:250px;
+    border-radius: 12px;
+    background-color: #E74C3C;}
+
+.mini_box_hours{
+    height: 25px;
+    width:250px;
+    border-radius: 12px;
+    background-color: #FFAA00;
+}
+
+
+
+.mini_box a{
+    text-align:center;
+    font-family: Montserrat, Verdana, serif;
+    color: aliceblue;
+}
+
+.mini_box_hours a{
+    text-align:center;
+    font-family: Montserrat, Verdana, serif;
+    color: aliceblue;
+}
+
+.mini_box p{
+    font-family: Montserrat, Verdana, serif;
+}
+.mini_box_hours p{
+    font-family: Montserrat, Verdana, serif;
+}
+
+
+/*Popup slider card*/
+#authenticated, #unauthenticated {
+
+
+}
+
+.loading-wrapper {
+    width: 100%;
+}
+
+.spoiler {
+    display: none;
+    margin-top: 3px;
+}
+
+.trigger.close {
+    display: none;
+}
+
+.trigger.open:target {
+    display: none;
+}
+
+.trigger.open:target + .trigger.close {
+    display: inline;
+}
+
+.trigger.open:target + .trigger.close + .spoiler {
+    display: block;
+}
+
+.settings .row {
+    text-align: left;
+}
+
+.dataTable th {
+    float: none;
+}

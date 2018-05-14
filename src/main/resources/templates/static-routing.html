@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <object th:include="fragments/head :: head" th:remove="tag"></object>
+</head>
+<body>
+<div id="wrapper" ng-app="ciscoApp" ng-controller="commandsCtrl">
+    <th:block th:replace="fragments/header :: nav('static-routing')"/>
+    <div id="page-wrapper" class="settings">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" style="margin: 40px 0 20px;">Routing statyczny</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Routing statyczny</div>
+                    <div class="panel-body">
+                        <form ng-submit="submitForm()" ng-class="{'has-error': errors == true}">
+
+                            <div class="form-group" >
+                                <label for="networksAdd">Dodawanie tras</label>
+                                <p class="help-block">Wpisz każdy adres IP, maskę podsieci oraz adres interfejsu w osobnej linii</p>
+                                <p class="help-block">Przykład: <b>192.168.8.0 255.255.255.0 192.168.2.2</b></p>
+                                <textarea ng-model="settings.staticRouting.networksAdd"
+                                          ng-list="&#10;" ng-trim="false" rows="5"
+                                          id="networksAdd"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="networksDelete">Usuwanie tras</label>
+                                <p class="help-block">Wpisz każdy adres IP, maskę podsieci oraz adres interfejsu w osobnej linii</p>
+                                <p class="help-block">Przykład: <b>192.168.8.0 255.255.255.0 192.168.2.2</b></p>
+                                <textarea ng-model="settings.staticRouting.networksDelete"
+                                          ng-list="&#10;" ng-trim="false" rows="5"
+                                          id="networksDelete"></textarea>
+
+                            </div>
+                            <span ng-show="errors" ng-cloak
+                                  class="help-block">Błędne adresy IP</span>
+
+                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block th:include="fragments/commands :: body"/>
+    </div>
+</div>
+<th:block th:include="fragments/scripts :: body"/>
+</body>
+</html>
